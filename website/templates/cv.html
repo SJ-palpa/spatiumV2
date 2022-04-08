@@ -1,0 +1,200 @@
+{% extends "base.html" %}
+{% block ajout_head %}
+    {% load static %}
+    {% load i18n %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/cv.css' %}">
+{% endblock %}
+{% block titre %}{% trans "CV"%}{% endblock %}
+{% block nav_fade %}navbar-scroll{% endblock %}
+{% block content %}
+<body>
+    <header>
+        <h1>CV de Pierre GIRAUD</h1>
+    </header>
+
+    <section>
+        <div class="photo">
+            <img src="{% static 'img/portrait.jpg' %}" alt="Ma photo de profil">
+        </div>
+        <div class="prez">
+            <h2>{% trans "Qui suis-je ?" %}</h2>
+            <p>{% trans "Actuellement en Master en Science de l'information. J’ai déjà eu l’occasion de travailler sur plusieurs projets web qui est mon domaine de prédilection. Je suis tout à fait en mesure de gérer la création d’une application web de sa création à sa mise en production. J'ai également acquis de solides compétences en création d'application VBA ainsi que dans la récolte d'information à partir de données." %}
+            </p>
+
+        </div>
+        <div class="contact">
+            <h2>{% trans "Informations de contact" %}</h2>
+            <div class="contact-flex">
+                <p>{% trans "Nom : " %}</p>
+                <p>JERMINI Stéphane</p>
+            </div>
+            <div class="contact-flex">
+                <p>{% trans "Mail : " %}</p>
+                <p><a href="mailto:jerministephane@gmail.com">jerministephane@gmail.com</a></p>
+            </div>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/jermini-st%C3%A9phane-9b5713b8/" target="_blank"><img src="{% static 'img/lk.png' %}" alt="Logo Lk"></a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>{% trans "Expériences professionnelles" %}</h2>
+         <div class="exp">
+            <div class="exp-logo">
+                <img src="{% static 'img/Logo_redycare.png' %}" alt="Logo amor">
+            </div>
+            <div class="exp-info">
+                <h3>{% trans "Développeur full stack" %}</h3>
+                <h4>{% trans "Redycare - Genève" %}</h4>
+                <h4>{% trans "mai 2020 – juin 2020" %}</h4>
+            </div>
+            <div class="exp-desc">
+                <p>{% trans "Création d'une Application web avec le framework Django. (voir "%}<a href="{% url "cv:portfolio" %}">{% trans "portfolio" %}</a>)</p>
+            </div>
+        </div>
+        <div class="exp">
+            <div class="exp-logo">
+               <img src="{% static 'img/amor_logo.png' %}" alt="Logo amor">
+            </div>
+            <div class="exp-info">
+                <h3>{% trans "Développeur full stack" %}</h3>
+                <h4>{% trans "A.M.OR - Genève" %}</h4>
+                <h4>{% trans "janvier 2019 – mai 2020" %}</h4>
+            </div>
+            <div class="exp-desc">
+                <p>{% trans "Création d'une Application web avec le framework Django. (voir " %} <a href="{% url "cv:portfolio" %}">{% trans "portfolio" %}</a>)</p>
+            </div>
+        </div>
+        <div class="exp">
+            <div class="exp-logo">
+                <a href="https://www.chsinc.com/global-locations/europe-middle-east" target="_blank"><img src="{% static 'img/CHS_Inc_logo.png' %}" alt="Logo chs"></a>
+            </div>
+            <div class="exp-info">
+                <h3>{% trans "Stagiaire" %}</h3>
+                <h4>{% trans "CHS europe - Genève" %}</h4>
+                <h4>{% trans "avril-mai 2019" %}</h4>
+            </div>
+            <div class="exp-desc">
+                <p>{% trans "Intégrations de données et création d'une application Excel (VBA)." %}</p>
+            </div>
+        </div>
+        <div class="exp">
+            <div class="exp-logo">
+                <a href="https://www.excosa.ch/fr" target="_blank"><img src="{% static 'img/exco_logo.png' %}" alt="Logo exco"></a>
+            </div>
+            <div class="exp-info">
+                <h3>{% trans "Développeur full stack" %}</h3>
+                <h4>{% trans "EXCOSA - Genève" %}</h4>
+                <h4>{% trans "Août 2017 – Février 2019" %}</h4>
+            </div>
+            <div class="exp-desc">
+                <p>{% trans "Création d'une Application web avec le framework Laravel. (voir " %}<a href="{% url "cv:portfolio" %}">{% trans "portfolio" %}</a>)</p>
+            </div>
+        </div>
+        <div class="exp">
+            <div class="exp-logo">
+                <a href="https://www.bbraun.ch/fr.html" target="_blank"><img src="{% static 'img/logo_bbraun.png' %}" alt="Logo bbraun"></a>
+            </div>
+            <div class="exp-info">
+                <h3>{% trans "Stagiaire" %}</h3>
+                <h4>{% trans "B.Braun - Sempach" %}</h4>
+                <h4>{% trans "avril-juillet 2017" %}</h4>
+            </div>
+            <div class="exp-desc">
+                <p>{% trans "Migration de données et la création d'une application Excel." %}</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>{% trans "Formation" %}</h2>
+        <div class="exp">
+            <div class="exp-logo">
+                <a href="https://www.hesge.ch/heg/" target="_blank"><img src="{% static 'img/heg.png' %}" ></a>
+            </div>
+            <div class="exp-info">
+                <h3>{% trans "Master Science de l’information" %}</h3>
+                <h4>{% trans "obtention prévue juin 2022" %}</h4>
+            </div>
+            <div class="exp-desc">
+                <p>Haute Ecole de Gestion
+                Rue de la Tambourine 7,
+                1227 Carouge" %}</p>
+            </div>
+        </div>
+        <div class="exp">
+            <div class="exp-logo">
+                <a href="https://www.hesge.ch/heg/" target="_blank"><img src="{% static 'img/heg.png' %}" ></a>
+            </div>
+            <div class="exp-info">
+                <h3>{% trans "Bachelor Informatique de gestion" %}</h3>
+                <h4>2017 - 2019</h4>
+            </div>
+            <div class="exp-desc">
+                <p>Haute Ecole de Gestion
+                Rue de la Tambourine 7,
+                1227 Carouge</p>
+            </div>
+        </div>
+        <div class="exp">
+            <div class="exp-logo">
+                <a href="https://edu.ge.ch/site/ecraymonduldry/esig/disciplines-esig-geneve/" target="_blank"><img src="{% static 'img/dd.png' %}" ></a>
+            </div>
+            <div class="exp-info">
+                <h3>{% trans "Ecole supérieur d’Informatique de Gestion" %}</h3>
+                <h4>2015 - 2017</h4>
+            </div>
+            <div class="exp-desc">
+                <p>École de commerce Raymond-Uldry
+                Chemin du Domaine-Patry 1
+                1224 Chêne-Bougeriesa</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>{% trans "Compétences professionnelles" %}</h2>
+        <div class="comp">
+            <p>OS</p>
+            <div class="conteneur-barre"><span class="barre c90"></span></div>
+        </div>
+        <div class="comp">
+            <p>{% trans "Programmation" %}</p>
+            <div class="conteneur-barre"><span class="barre c95"></span></div>
+        </div>
+        <div class="comp">
+            <p>Web</p>
+            <div class="conteneur-barre"><span class="barre c100"></span></div>
+        </div>
+        <div class="comp">
+            <p>Design</p>
+            <div class="conteneur-barre"><span class="barre c90"></span></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>{% trans "Langues" %}</h2>
+        <figure class="interet">
+            <img src="{% static 'img/de.png' %}" alt="german">
+            <figcaption>{% trans "Allemand" %}</figcaption>
+        </figure>
+        <figure class="interet">
+            <img src="{% static 'img/fr.png' %}" alt="french">
+            <figcaption>{% trans "Français" %}</figcaption>
+        </figure>
+        <figure class="interet">
+            <img src="{% static 'img/en.png' %}" alt="english">
+            <figcaption>{% trans "Anglais" %}</figcaption>
+        </figure>
+    </section>
+</body>
+
+<!-- inspiré de :  https://www.pierre-giraud.com/html-css-apprendre-coder-cours/creation-page-cv-responsive -->
+{% endblock %}
+{% block script %}
+<script>
+
+</script>
+{% endblock %}

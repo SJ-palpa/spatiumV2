@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+{% block ajout_head %}
+    {% load static %}
+    {% load i18n %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/portfolio.css' %}">
+{% endblock %}
+{% block titre %}{% trans "Portfolio"%}{% endblock %}
+{% block nav_fade %}navbar-scroll{% endblock %}
+{% block content %}
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center marge_container">
+  <h1 class="display-4">{% trans "Portfolio" %}</h1>
+</div>
+<div class="container ">
+  <div class="row mb-2 ">
+    <div class="col-md-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">Django</strong>
+          <h3 class="mb-0">Amor</h3>
+          <div class="mb-1 text-muted">2019-2020</div>
+          <p class="card-text mb-auto">{% trans "Site vitrine pour l’association A.M.OR." %}</p>
+          <a href="{% static 'img/portfolio/amor/amor_exemplePage.PNG' %}" data-toggle="lightbox" data-gallery="amor" class="stretched-link" data-title="{% trans "Page lambda" %}">{% trans "Aperçu" %}</a>
+        </div>
+        <div class=" d-none d-lg-block hover_img">
+            <a href="{% static 'img/portfolio/amor/amor_accueil.PNG' %}" data-toggle="lightbox" data-gallery="amor" data-title="{% trans "Page d'accueil" %}">
+                <img src="{% static 'img/portfolio/amor/amor_couverture.PNG' %}" class="image">
+                <div class="overlay">
+                    <div class="text">{% trans "Aperçu" %}</div>
+                 </div>
+            </a>
+        </div>
+        <!-- elements not showing, use data-remote -->
+        <div data-toggle="lightbox" data-gallery="amor" data-remote="{% static 'img/portfolio/amor/amor_pageContact.PNG' %}" data-title="{% trans "Page pontact" %}"></div>
+        <div data-toggle="lightbox" data-gallery="amor" data-remote="{% static 'img/portfolio/amor/amor_outilAdmin.PNG' %}" data-title="{% trans "Page admin" %}"></div>
+
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">Django</strong>
+          <h3 class="mb-0">Redycare</h3>
+          <div class="mb-1 text-muted">2020</div>
+          <p class="card-text mb-auto">{% trans "E-commerce, vente de produit pharmaceutique." %}</p>
+          <a href="{% static 'img/portfolio/redycare/redycare_accueil.PNG' %}" data-toggle="lightbox" data-gallery="redycare" class="stretched-link" data-title="{% trans "Page d'accueil" %}">{% trans "Aperçu" %}</a>
+        </div>
+        <div class=" d-none d-lg-block hover_img">
+            <a href="{% static 'img/portfolio/redycare/redycare_catalogue.PNG' %}" data-toggle="lightbox" data-gallery="redycare" data-title="{% trans "Page catalogue" %}">
+                <img src="{% static 'img/portfolio/redycare/redycare_couverture.png' %}" class="image">
+                <div class="overlay">
+                    <div class="text">{% trans "Aperçu" %}</div>
+                 </div>
+            </a>
+        </div>
+        <!-- elements not showing, use data-remote -->
+        <div data-toggle="lightbox" data-gallery="redycare" data-remote="{% static 'img/portfolio/redycare/redycare_checkout.PNG' %}" data-title="{% trans "Page checkout" %}"></div>
+        <div data-toggle="lightbox" data-gallery="redycare" data-remote="{% static 'img/portfolio/redycare/redycare_exemple.PNG' %}" data-title="{% trans "Page lambda" %}"></div>
+        <div data-toggle="lightbox" data-gallery="redycare" data-remote="{% static 'img/portfolio/redycare/redycare_login.PNG' %}" data-title="{% trans "Page login" %}"></div>
+        <div data-toggle="lightbox" data-gallery="redycare" data-remote="{% static 'img/portfolio/redycare/redycare_mail.PNG' %}" data-title="{% trans "Mail" %}"></div>
+        <div data-toggle="lightbox" data-gallery="redycare" data-remote="{% static 'img/portfolio/redycare/redycare_admin.PNG' %}" data-title="{% trans "Page admin" %}"></div>
+
+      </div>
+    </div>
+  </div>
+   <div class="row mb-2 ">
+
+    <div class="col-md-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-danger">Laravel</strong>
+          <h3 class="mb-0">Exco</h3>
+          <div class="mb-1 text-muted">2017-2019</div>
+          <p class="card-text mb-auto">{% trans "Application web pour une fiduciaire. Site vitrine ainsi que gestion des membres et des diverses annonces." %}</p>
+          <a href="{% static 'img/portfolio/exco/exco_acceuil.PNG' %}" data-toggle="lightbox" data-gallery="exco" class="stretched-link" data-title="{% trans "Page d'accueil" %}">{% trans "Aperçu" %}</a>
+        </div>
+        <div class=" d-none d-lg-block hover_img">
+            <a href="{% static 'img/portfolio/exco/exco_actualite.PNG' %}" data-toggle="lightbox" data-gallery="exco" data-title="{% trans "Page actualité" %}">
+                <img src="{% static 'img/portfolio/exco/exco_logo.png' %}" class="image">
+                <div class="overlay">
+                    <div class="text">{% trans "Aperçu" %}</div>
+                 </div>
+            </a>
+        </div>
+        <!-- elements not showing, use data-remote -->
+        <div data-toggle="lightbox" data-gallery="exco" data-remote="{% static 'img/portfolio/exco/exco_equipe.PNG' %}" data-title="{% trans "Page équipe" %}"></div>
+
+      </div>
+    </div>
+
+
+    <div class="col-md-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">Django</strong>
+          <h3 class="mb-0">Covalence</h3>
+          <div class="mb-1 text-muted">2019</div>
+          <p class="card-text mb-auto">{% trans "Application web pour une entreprise de revente d’information." %}</p>
+          <a href="{% static 'img/portfolio/covalence/cov_accueil.PNG' %}" data-toggle="lightbox" data-gallery="covalence" class="stretched-link" data-title="Page d'accueil">{% trans "Aperçu" %}</a>
+        </div>
+        <div class=" d-none d-lg-block hover_img">
+            <a href="{% static 'img/portfolio/covalence/cov_creationPortfolio.PNG' %}" data-toggle="lightbox" data-gallery="covalence" data-title="{% trans "Page création" %}">
+                <img src="{% static 'img/portfolio/covalence/cov_couverture.png' %}" class="image">
+                <div class="overlay">
+                    <div class="text">{% trans "Aperçu" %}</div>
+                 </div>
+            </a>
+        </div>
+        <!-- elements not showing, use data-remote -->
+        <div data-toggle="lightbox" data-gallery="covalence" data-remote="{% static 'img/portfolio/covalence/cov_portfolio.PNG' %}" data-title="{% trans "Page portfolio" %}"></div>
+        <div data-toggle="lightbox" data-gallery="covalence" data-remote="{% static 'img/portfolio/covalence/cov_login.PNG' %}" data-title="{% trans "Page login" %}"></div>
+      </div>
+    </div>
+   </div>
+</div>
+
+
+
+
+{% endblock %}
+{% block script %}
+<script>
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+    });
+</script>
+{% endblock %}
